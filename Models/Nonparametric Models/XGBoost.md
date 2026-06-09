@@ -9,10 +9,10 @@ Loss Function: $$
 $$
 - Objective has two two parts, training loss and regularization
 	- Training Loss: How well model fits training data
-	- :
-	- Regularization: Complexity of the trees
+		- Squared Loss function!
+	- Regularization: Complexity of the trees: $\Omega(f)$
 - $\Omega(f)=\gamma J+\frac{1}{2} \lambda \sum_{j=1}^J w_j^2$
-	- regularizer on Tree complexity
+	- regularize on Tree complexity
 		- Standard trees can memorize the noise in the tree leading to overfitting. 
 		- Want simplest tree that does a good job
 	- $J$ is the number of leaves
@@ -23,6 +23,13 @@ $$
 		- lambda
 		- L2 regularization on leaf scores($w_j$) weights
 		- Shrinks the final prediction value of each leaf making model more conservative
+	- $w_j$
+		- Leaf Scores or weights
+
+Example:
+- Split 1 age < 15
+	- Left: is male
+
 
 The goal is to find the optimal split and leaf weight. To do this we need the direction and curvature, so gradient and Hessian. 
 
