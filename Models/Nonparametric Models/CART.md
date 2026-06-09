@@ -89,7 +89,10 @@ Cons
 ### Ensemble Learning
 
  Decision Trees are unstable and have a high variance. How do we solve this?
- - Average Multiple Models. 
+ - Average Multiple Models call base model or learner
+	 - Different hyperparameters of the same algo
+	 - different algos
+	 - different data/feature set of same algo
  - Called *Ensemble Learning*
 
 Model: $f(y \mid \boldsymbol{x})=\frac{1}{|\mathcal{M}|} \sum_{m \in \mathcal{M}} f_m(y \mid \boldsymbol{x})$

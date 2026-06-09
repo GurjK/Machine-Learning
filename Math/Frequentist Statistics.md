@@ -100,5 +100,7 @@ $$\mathbb{E}_{\mathcal{D}, y}\left[\left(y-\hat{f}_{\mathcal{D}}(\vec{x})\right)
 Examples
 - Low bias and low variance: linear regression on linear data
 - low bias and high variance: high degree polynomial
+- High bias and low variance: model independent of training data
+- High Bias and High Variance: Linear regression on non-linear data
 
 A MAP estimate may be biased but have lower variance compared to an unbiased estimator. Thus we see that, provided the prior strength is properly “tuned”, a MAP estimate can outperform an ML estimate in terms of minimizing MSE.
