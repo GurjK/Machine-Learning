@@ -94,7 +94,10 @@ Cons
 	 - different algos
 	 - different data/feature set of same algo
  - Called *Ensemble Learning*
-	 - Logically, say you have
+	 - Logically, say you have 3 base learners that are right 70 percent of the time
+		 - Odds all 3 right? .7 * .7 * .7 = 34%
+		 - Odd at least 2 right? .7 * .7 * .3 =14.7*3 = 44.1%
+		 - Therfore ensemble is right at least 78% of the time!
 
 Model: $f(y \mid \boldsymbol{x})=\frac{1}{|\mathcal{M}|} \sum_{m \in \mathcal{M}} f_m(y \mid \boldsymbol{x})$
 - $f_m$ is the $m$'th base model
