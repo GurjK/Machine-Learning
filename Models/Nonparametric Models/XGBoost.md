@@ -29,6 +29,10 @@ $$
 Example:
 - Split 1 age < 15
 	- Left: is male
+		- Left : Leaf 1: w1 = 2
+		- Right: Leaf 2: w2 = .1
+	- Right: Leaf 3: w3 = .1
+- $\Omega(f) = \gamma * 3 + .5 \lambda (2^2+.1^2+ (-1)^2)$
 
 
 The goal is to find the optimal split and leaf weight. To do this we need the direction and curvature, so gradient and Hessian. 
