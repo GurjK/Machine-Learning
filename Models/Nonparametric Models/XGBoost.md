@@ -20,7 +20,7 @@ $$
 		- L2 regularization on leaf scores($w_j$) weights
 		- Shrinks the final prediction value of each leaf making model more conservative
 
-The goal is to find the optimal split and leaf weight. To do this we need the direction and curvature, so gradient and 
+The goal is to find the optimal split and leaf weight. To do this we need the direction and curvature, so gradient and Hessian. 
 
 At the $m$th step the loss is: $$
 \mathcal{L}_m\left(F_m\right)=\sum_{i=1}^N \ell\left(y_i, f_{m-1}\left(\boldsymbol{x}_i\right)+F_m\left(\boldsymbol{x}_i\right)\right)+\Omega\left(F_m\right)+\text { const }
