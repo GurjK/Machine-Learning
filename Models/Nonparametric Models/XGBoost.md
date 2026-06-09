@@ -25,13 +25,14 @@ $$
 		- Shrinks the final prediction value of each leaf making model more conservative
 	- $w_j$
 		- Leaf Scores or weights
-
+- $\sum_{i=1}^N \ell\left(y_i, f\left(\boldsymbol{x}_i\right)\right)$ : Training Loss
+	- Additive Boosting
 Example:
 - Split 1 age < 15
 	- Left: is male
 		- Left : Leaf 1: w1 = 2
 		- Right: Leaf 2: w2 = .1
-	- Right: Leaf 3: w3 = .1
+	- Right: Leaf 3: w3 = -1
 - $\Omega(f) = \gamma * 3 + .5 \lambda (2^2+.1^2+ (-1)^2)$
 
 
