@@ -7,6 +7,10 @@ Extreme Gradient Boosting
 Loss Function: $$
 \mathcal{L}(f)=\sum_{i=1}^N \ell\left(y_i, f\left(\boldsymbol{x}_i\right)\right)+\Omega(f)
 $$
+- Objective has two two parts, training loss and regularization
+	- Training Loss: How well model fits training data
+	- :
+	- Regularization: Complexity of the trees
 - $\Omega(f)=\gamma J+\frac{1}{2} \lambda \sum_{j=1}^J w_j^2$
 	- regularizer on Tree complexity
 		- Standard trees can memorize the noise in the tree leading to overfitting. 
