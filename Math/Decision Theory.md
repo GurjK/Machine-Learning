@@ -194,16 +194,16 @@ $B_{1,0} \triangleq \frac{p\left(\mathcal{D} \mid M_1\right)}{p\left(\mathcal{D}
 - >1 Prefer model 1 else model 0
 - Use this Scale to determine Decision Ruke
 
-| Bayes factor $B F(1,0)$ | Interpretation |
-| :---: | :---: |
-| $B F<\frac{1}{100}$ | Decisive evidence for $M_0$ |
-| $B F<\frac{1}{10}$ | Strong evidence for $M_0$ |
+|      Bayes factor $B F(1,0)$       |       Interpretation        |
+| :--------------------------------: | :-------------------------: |
+|        $B F<\frac{1}{100}$         | Decisive evidence for $M_0$ |
+|         $B F<\frac{1}{10}$         |  Strong evidence for $M_0$  |
 | $\frac{1}{1 \rho}<B F<\frac{1}{3}$ | Moderate evidence for $M_0$ |
-| $\frac{1}{3}<B F<1$ | Weak evidence for $M_0$ |
-| $1<B F<3$ | Weak evidence for $M_1$ |
-| $3<B F<10$ | Moderate evidence for $M_1$ |
-| $B F>10$ | Strong evidence for $M_1$ |
-| $B F>100$ | Decisive evidence for $M_1$ |
+|        $\frac{1}{3}<B F<1$         |   Weak evidence for $M_0$   |
+|             $1<B F<3$              |   Weak evidence for $M_1$   |
+|             $3<B F<10$             | Moderate evidence for $M_1$ |
+|              $B F>10$              |  Strong evidence for $M_1$  |
+|             $B F>100$              | Decisive evidence for $M_1$ |
 
 ##### Multiple Models
 
