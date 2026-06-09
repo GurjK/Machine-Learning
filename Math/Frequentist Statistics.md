@@ -86,6 +86,14 @@ Issues
 ### MSE
 
 MSE = Variance + Bias^2
+
+$$\mathbb{E}_{\mathcal{D}, y}\left[\left(y-\hat{f}_{\mathcal{D}}(\vec{x})\right)^2\right]=(f(\vec{x})-\bar{f}(\vec{x}))^2+\mathbb{E}_{\mathcal{D}}\left[\left(\bar{f}(\vec{x})-\hat{f}_{\mathcal{D}}(\vec{x})\right)^2\right]+\mathbb{E}_\epsilon\left[\epsilon^2\right]$$
+- Target - Approximation 
+	- Bias: Expected Error due to model mismatch
+		- True function - average of approximation function
+	- Variance: Average value from estimator - approximation function
+	- Noise
+		- Limits error on upper bound of model
 - $\begin{aligned}&\text { The bias of an estimator is defined as }\\&\operatorname{bias}(\hat{\theta}(\cdot)) \triangleq \mathbb{E}[\hat{\theta}(\mathcal{D})]-\theta^*\end{aligned}$
 - Variance = $\mathbb{V}[\hat{\theta}] \triangleq \mathbb{E}\left[\hat{\theta}^2\right]-(\mathbb{E}[\hat{\theta}])^2$
 
