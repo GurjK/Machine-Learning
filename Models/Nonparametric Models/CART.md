@@ -94,6 +94,7 @@ Cons
 	 - different algos
 	 - different data/feature set of same algo
  - Called *Ensemble Learning*
+	 - Logically, say you have
 
 Model: $f(y \mid \boldsymbol{x})=\frac{1}{|\mathcal{M}|} \sum_{m \in \mathcal{M}} f_m(y \mid \boldsymbol{x})$
 - $f_m$ is the $m$'th base model
