@@ -97,4 +97,8 @@ $$\mathbb{E}_{\mathcal{D}, y}\left[\left(y-\hat{f}_{\mathcal{D}}(\vec{x})\right)
 - $\begin{aligned}&\text { The bias of an estimator is defined as }\\&\operatorname{bias}(\hat{\theta}(\cdot)) \triangleq \mathbb{E}[\hat{\theta}(\mathcal{D})]-\theta^*\end{aligned}$
 - Variance = $\mathbb{V}[\hat{\theta}] \triangleq \mathbb{E}\left[\hat{\theta}^2\right]-(\mathbb{E}[\hat{\theta}])^2$
 
+Examples
+- Low bias and low variance: linear regression on linear data
+- low bias and high variance: high degree polynomial
+
 A MAP estimate may be biased but have lower variance compared to an unbiased estimator. Thus we see that, provided the prior strength is properly “tuned”, a MAP estimate can outperform an ML estimate in terms of minimizing MSE.
