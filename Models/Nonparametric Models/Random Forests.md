@@ -28,4 +28,5 @@ How?
 
 Steps:
 - Given Training Data $D$, Generate $M$ bags from training data by sampling with replacement. Both features and data points are sampled
-- 
+- Generate Base Learners and train on bag. Validate on OOB
+	- Select best split from subset of sampled cols
