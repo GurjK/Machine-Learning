@@ -143,7 +143,7 @@ Why is Bagging's variance smaller?
 	- If random variable is measured $T$ times then we have $x_1 +...x_T$ / $T$ then 
 		- Mean is still $\mu$
 		- Variance is smaller: $\sigma^2 / T$
-- Assu
+- Assumes that base learners are independent of each other but if $T$ is very large then variance is $\rho \sigma^2$ is correlated 
 
 
 
