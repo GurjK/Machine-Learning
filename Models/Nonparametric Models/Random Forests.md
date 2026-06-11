@@ -30,3 +30,9 @@ Steps:
 - Given Training Data $D$, Generate $M$ bags from training data by sampling with replacement. Both features and data points are sampled
 - Generate Base Learners and train on bag. Validate on OOB
 	- Select best split from subset of sampled cols
+	- Number of Samples Cols = $\sqrt{ \text{ Number of Features}}$
+- Final Estimate is average or max vote across $T$ models
+
+Summary
+- Produces better estimation than bagging ensembler
+- Results are typically not
