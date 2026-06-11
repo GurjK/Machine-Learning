@@ -118,6 +118,8 @@ Bagging stands for "Bootstrap Aggregating". This is a simple Ensemble Method
 - Fit $M$ different base models to different randomly sampled versions of the data
 	- Sampled with Replacements
 	- Continue until $N$ data points (Total number of data points)
+- Bootstrapping is used fro sampling the training data and generating the $M$ bags
+- Data can overlap between base learners
 Pros
 - Prevents overreliance on any one data point.
 	- Advantage increases with size of ensemble
@@ -126,8 +128,11 @@ Cons
 	- Data point will not be selected: $(1 - \frac{1}{N})^N -> .37$
 	- 37% are called out of bag instances.Can be used as test set
 - Bagging does not always improve performance. In particular, it relies on the base models being unstable estimators, so that omitting some of the data significantly changes the resulting model fit
+- Base Learns may overfit the data and have low bias and high variance
 
-
+Steps
+- Generate $M$ bags from training data $D$ by sampling with replacement
+	- Same number of features but only a certain n
 ### Boosting
 
 Bagging Models: $f(\boldsymbol{x} ; \boldsymbol{\theta})=\sum_{m=1}^M \beta_m F_m\left(\boldsymbol{x} ; \boldsymbol{\theta}_m\right)$
