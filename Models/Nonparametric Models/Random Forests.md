@@ -19,7 +19,7 @@ Random Forest
 - Validate out of bag errors during training
 	- cross validation on out of bag data points
 - Ability to tune hyper parameters for underlying algorithm
-	- Regularization can be impos
+	- Regularization can be imposed
 
 How?
 - Feature split dimension $j$ is optimized over a random subset of the features: $S_i \subset\{1, \ldots, D\}$.
@@ -27,4 +27,5 @@ How?
 
 
 Steps:
+- Given Training Data $D$, Generate $M$ bags from training data by sampling with replacement. Both features and data points are sampled
 - 
