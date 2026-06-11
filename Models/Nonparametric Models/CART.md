@@ -126,13 +126,16 @@ Pros
 Cons
 - Each model only sees 63% on average of unique data points
 	- Data point will not be selected: $(1 - \frac{1}{N})^N -> .37$
-	- 37% are called out of bag instances.Can be used as test set
+		- $N \cdot\left(1-\left(1-\frac{1}{N}\right)^N\right) \sim N(1-\exp (-1)) \sim 0.632 \cdot N$
+	- 37% are called out of bag instances. Can be used as test set
 - Bagging does not always improve performance. In particular, it relies on the base models being unstable estimators, so that omitting some of the data significantly changes the resulting model fit
 - Base Learns may overfit the data and have low bias and high variance
 
 Steps
 - Generate $M$ bags from training data $D$ by sampling with replacement
-	- Same number of features but only a certain n
+	- Same number of features but only a certain number of data points
+- Generate base Learners and train their bags on them
+- Final Estimate is average or max vote across $M$ models
 ### Boosting
 
 Bagging Models: $f(\boldsymbol{x} ; \boldsymbol{\theta})=\sum_{m=1}^M \beta_m F_m\left(\boldsymbol{x} ; \boldsymbol{\theta}_m\right)$
