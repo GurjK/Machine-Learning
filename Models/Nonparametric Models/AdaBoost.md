@@ -156,7 +156,14 @@ ADABoost Algo Summary
 		- Make predictions for each row
 		- Determine if classified right or wrong
 		- ADA Boost uses Exponential Loss: $\mathcal{L}(f)=\frac{1}{N}\ \sum e^{-y_i \cdot f\left(x_i\right)}$
-		- 
+- Set $\lambda_t=\frac{1}{2} \ln \left(\frac{1-e_t}{e_t}\right)$
+	- Determines step size in adaptive boosting
+	- Weights for each of the model
+	- $e_t=\frac{\sum_{i=1}^n\left(e_i * w_i\right)}{\sum_{i=1}^n w_i}$
+		- Weighted error term
+- Update the weights
+	- - $w_i \leftarrow w_i e^{\lambda_{\mathrm{t}}}$ if wrongly classified by $g_k$
+	- $w_i \leftarrow w_i e^{-\lambda_{\mathrm{t}}}$ if correctly classified
 
 
 This is known as *logitBoost*
