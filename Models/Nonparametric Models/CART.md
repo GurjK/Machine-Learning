@@ -161,10 +161,13 @@ Boosting is an algorithm for sequentially fitting additive models where each $F_
 - $F_1$ is fit on original data
 	- Weight data samples by the errors made by $F_1$ so misclassified examples get more weight
 	- Compute the residuals: $\epsilon_i = z_i y_i-F_1\left(\vec{x}_i\right)$
+	- Generally: $\epsilon_i=-\frac{\partial l_i}{\partial f\left(\vec{x}_i\right)} \quad \mathcal{L}(f)=\frac{1}{2 N} \sum_i\left(y_i-f\left(\vec{x}_i\right)\right)^2$
+		- Loss function can be anything and not mean squared error in reality
 - $F_2$ to this weighted data set
 	- Keep repeating until we have $M$ of components
 	- $M$ is hyperparameter that controls complexity of overall model and can be chosen by monitoring performance on validation set and using early stopping
-- $F_{k+1} = F_k + g_{k}$ where $g_k$ is the same as $F_2$ or the model fit to the residuals
+- $F_{k+1} = F_k + \lambda g_{k}$ where $g_k$ is the same as $F_2$ or the model fit to the residuals
+	- $\lambda$ is the weights
 - Start with a weak learner and end with a strong learner
 	- Boosting reduces the bias of the strong learning by fitting trees that depend on each other
 	- Boosting gradually reduces systematic error, which improves approximation accuracy
