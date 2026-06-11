@@ -35,4 +35,6 @@ Steps:
 
 Summary
 - Produces better estimation than bagging ensembler
-- Results are typically not
+- Results are typically not very sensitive to data/features
+- Useful for regression, classification, similarity scoring and feature importance
+
