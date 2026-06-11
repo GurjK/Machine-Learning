@@ -152,7 +152,11 @@ ADABoost Algo Summary
 	- Generate training dataset with $w_i$
 	- Weights are lower/higher based on if they were classified wrong
 	- Fit some weak learner $g_t$
-- 
+		- Additition tree or axis parallel
+		- Make predictions for each row
+		- Determine if classified right or wrong
+		- ADA Boost uses Exponential Loss: $\mathcal{L}(f)=\frac{1}{N}\ \sum e^{-y_i \cdot f\left(x_i\right)}$
+		- 
 
 
 This is known as *logitBoost*
