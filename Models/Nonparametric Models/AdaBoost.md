@@ -166,7 +166,8 @@ ADABoost Algo Summary
 		- $w_i \leftarrow w_i e^{-\lambda_{\mathrm{t}}}$ if correctly classified
 	- Normalize the weights so that they sum to 1
 	- New model: $f_t = f_{t-1} + \lambda_t g_t$
-- $
+- $\text { Output the final model } f_T(\mathrm{x})=\operatorname{sgn}\left(\sum_{t=0}^{T-1} \lambda_t \cdot g_t\right)$
+- 
 
 
 This is known as *logitBoost*
