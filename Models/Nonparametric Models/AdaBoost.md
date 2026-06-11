@@ -144,6 +144,17 @@ Natural altenrative: use Log loss
 &\text { The goal is to minimze the expected log-loss, given by }\\
 &L_m(F)=\sum_{i=1}^N \log \left[1+\exp \left(-2 \tilde{y}_i\left(f_{m-1}(\boldsymbol{x})+F\left(\boldsymbol{x}_i\right)\right)\right)\right]
 \end{aligned}$$
+
+ADABoost Algo Summary
+- Initialize weights $w_i = 1 / N$ for every data point $i$
+	- Start with null classfier: $f_0(\vec{x})=g_0(\vec{x})=0$
+- For $t=0$ to $T-1$
+	- Generate training dataset with $w_i$
+	- Weights are lower/higher based on if they were classified wrong
+	- Fit some weak learner $g_t$
+- 
+
+
 This is known as *logitBoost*
 
 $$
