@@ -147,7 +147,7 @@ Natural altenrative: use Log loss
 
 ADABoost Algo Summary
 - Initialize weights $w_i = 1 / N$ for every data point $i$
-	- Start with null classfier: $f_0(\vec{x})=g_0(\vec{x})=0$
+- Start with null classfier: $f_0(\vec{x})=g_0(\vec{x})=0$
 - For $t=0$ to $T-1$
 	- Generate training dataset with $w_i$
 	- Weights are lower/higher based on if they were classified wrong
@@ -156,14 +156,17 @@ ADABoost Algo Summary
 		- Make predictions for each row
 		- Determine if classified right or wrong
 		- ADA Boost uses Exponential Loss: $\mathcal{L}(f)=\frac{1}{N}\ \sum e^{-y_i \cdot f\left(x_i\right)}$
-- Set $\lambda_t=\frac{1}{2} \ln \left(\frac{1-e_t}{e_t}\right)$
+	- Set $\lambda_t=\frac{1}{2} \ln \left(\frac{1-e_t}{e_t}\right)$
 	- Determines step size in adaptive boosting
 	- Weights for each of the model
-	- $e_t=\frac{\sum_{i=1}^n\left(e_i * w_i\right)}{\sum_{i=1}^n w_i}$
+		- $e_t=\frac{\sum_{i=1}^n\left(e_i * w_i\right)}{\sum_{i=1}^n w_i}$
 		- Weighted error term
-- Update the weights
-	- - $w_i \leftarrow w_i e^{\lambda_{\mathrm{t}}}$ if wrongly classified by $g_k$
-	- $w_i \leftarrow w_i e^{-\lambda_{\mathrm{t}}}$ if correctly classified
+	- Update the weights
+		- $w_i \leftarrow w_i e^{\lambda_{\mathrm{t}}}$ if wrongly classified by $g_k$
+		- $w_i \leftarrow w_i e^{-\lambda_{\mathrm{t}}}$ if correctly classified
+	- Normalize the weights so that they sum to 1
+	- New model: $f_t = f_{t-1} + \lambda_t g_t$
+	- 
 
 
 This is known as *logitBoost*
