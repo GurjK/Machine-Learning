@@ -160,9 +160,11 @@ Bagging Models: $f(\boldsymbol{x} ; \boldsymbol{\theta})=\sum_{m=1}^M \beta_m F_
 Boosting is an algorithm for sequentially fitting additive models where each $F_m$ is a binary classifier that returns $F_m \in (-1,+1)$ 
 - $F_1$ is fit on original data
 	- Weight data samples by the errors made by $F_1$ so misclassified examples get more weight
+	- Compute the residuals: $\epsilon_i = z_i y_i-F_1\left(\vec{x}_i\right)$
 - $F_2$ to this weighted data set
 	- Keep repeating until we have $M$ of components
 	- $M$ is hyperparameter that controls complexity of overall model and can be chosen by monitoring performance on validation set and using early stopping
+- $F_{k+1} = F_k + g_{k}$ where $g_k$ is the same as $F_2$ or the model fit to the residuals
 - Start with a weak learner and end with a strong learner
 	- Boosting reduces the bias of the strong learning by fitting trees that depend on each other
 	- Boosting gradually reduces systematic error, which improves approximation accuracy
