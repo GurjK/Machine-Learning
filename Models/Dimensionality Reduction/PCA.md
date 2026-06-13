@@ -27,6 +27,6 @@ Definitions:
 
 Goal: Approximate $x_n$ by creating a lower dimensional representation $z_n \in R^L$
 - Assume that $x_n$ can be explained in terms of a weighted combinanation of basis functions: $w_1,...,w_L$
-- 
+	- $x_n \approx 
 ## Computational Issues
 
