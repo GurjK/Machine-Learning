@@ -108,4 +108,9 @@ $$
 - $\hat{\boldsymbol{x}}_n=\mathbf{W} \boldsymbol{z}_n+\boldsymbol{\mu}$
 - $\boldsymbol{z}_n=\mathbf{W}^{\boldsymbol{\top}}\left(\boldsymbol{x}_n-\boldsymbol{\mu}\right)$
 
-We can plot $\mathcal{L}_L$ vs $
+Methods
+- We can plot $\mathcal{L}_L$ vs $L$
+	- Ideally plot this on the test data to avoid overfitting
+- Scree Plots: plot $\lambda_j$ vs $j$
+	- $\mathcal{L}_L=\sum_{j=L+1}^{D} \lambda_j$
+		- As the number of dimensions increase, eigenvalues get smaller and 
