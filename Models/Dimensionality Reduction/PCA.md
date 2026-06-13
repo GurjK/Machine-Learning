@@ -99,4 +99,9 @@ Important Notes
 		2) To get the data back: $\hat{\mathbf{X}}=\mathbf{Z} \mathbf{W}^{\top}=\mathbf{U}_X \mathbf{S}_X \mathbf{V}_X^{\top}$
 	2) For very high dimensional data we can use randomized SVD algo:
 
+### Number of Dimensions
 
+Using L dimensions the reconstruction error is: $$
+\mathcal{L}_L=\frac{1}{|\mathcal{D}|} \sum_{n \in \mathcal{D}}\left\|\boldsymbol{x}_n-\hat{\boldsymbol{x}}_n\right\|^2
+$$
+- 
