@@ -63,6 +63,21 @@ $$
 $$
 - $\Sigma$ is the covariance matrix empirically
 	- Data is centered
-- impose the contraint the $||w_1
+- impose the contraint the $||w_1|| =1$ and instead optimize 
+$$
+\tilde{\mathcal{L}}\left(\boldsymbol{w}_1\right)=\boldsymbol{w}_1^{\top} \hat{\boldsymbol{\Sigma}} \boldsymbol{w}_1-\lambda_1\left(\boldsymbol{w}_1^{\top} \boldsymbol{w}_1-1\right)
+$$
+- $\lambda$ is a lagrange multiplier here!
+
+Taking derivatives and solving gives: 
+$$
+\begin{aligned}
+\frac{\partial}{\partial \boldsymbol{w}_1} \tilde{\mathcal{L}}\left(\boldsymbol{w}_1\right) & =2 \hat{\boldsymbol{\Sigma}} \boldsymbol{w}_1-2 \lambda_1 \boldsymbol{w}_1=0 \\
+\hat{\boldsymbol{\Sigma}} \boldsymbol{w}_1 & =\lambda_1 \boldsymbol{w}_1
+\end{aligned}
+$$
+
+*Hence the optimal direction onto which we should project the data is an eigenvector of the covariance matrix.*
+- We want to maximize 
 ## Computational Issues
 
