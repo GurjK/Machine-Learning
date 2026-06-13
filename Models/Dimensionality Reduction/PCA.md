@@ -24,9 +24,11 @@ Definitions:
 	- $N \times D$ data matrix $X$
 - $\overline{\boldsymbol{x}}=\frac{1}{N} \sum_{n=1}^N \boldsymbol{x}_n=\mathbf{0}$
 	- Data matrix centered
+- $z_n$: low dimensional representation of $x_n$ known as the latent factor
 
 Goal: Approximate $x_n$ by creating a lower dimensional representation $z_n \in R^L$
 - Assume that $x_n$ can be explained in terms of a weighted combinanation of basis functions: $w_1,...,w_L$
-	- $x_n \approx 
+	- $\boldsymbol{x}_n \approx \sum_{k=1}^L z_{n k} \boldsymbol{w}_k$
+
 ## Computational Issues
 
