@@ -88,4 +88,8 @@ Important Notes
 	1) PCA can be misled by directions in which the variance is high merely because of the scale of the data
 	2) Equivalent to standardizing the data
 2) If $D>N$ then it is faster to working with the $N \times N$ Gram Matrix: $XX^T$
-	1) $U$ containts the eigenvectors of $XX^T$
+	1) $U$ contains the eigenvectors of $XX^T$ with eigenvalues $\Lambda$
+	2) $\mathbf{V}=\mathbf{X}^{\top} \mathbf{U} \boldsymbol{\Lambda}^{-\frac{1}{2}}$
+		1) This is the normalized eigenvectors
+		2) $\mathbf{V}=\mathbf{X}^{\top} \mathbf{U}$
+3) 
