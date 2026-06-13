@@ -35,6 +35,16 @@ There error can therefore be approximated by: $$
 $$
 - $Z$ : containts low dimension versions of the rows of $X$
 
+Goal is to minimize this error subject to constraint that $W$ is orthogonal:
+- This means that, $w_1^T w_w = 1$
 
+$$
+\begin{aligned}
+\mathcal{L}\left(\boldsymbol{w}_1, \tilde{\mathbf{z}}_1\right) & =\frac{1}{N} \sum_{n=1}^N\left\|\boldsymbol{x}_n-z_{n 1} \boldsymbol{w}_1\right\|^2=\frac{1}{N} \sum_{n=1}^N\left(\boldsymbol{x}_n-z_{n 1} \boldsymbol{w}_1\right)^{\top}\left(\boldsymbol{x}_n-z_{n 1} \boldsymbol{w}_1\right) \\
+& =\frac{1}{N} \sum_{n=1}^N\left[\boldsymbol{x}_n^{\top} \boldsymbol{x}_n-2 z_{n 1} \boldsymbol{w}_1^{\top} \boldsymbol{x}_n+z_{n 1}^2 \boldsymbol{w}_1^{\top} \boldsymbol{w}_1\right] \\
+& =\frac{1}{N} \sum_{n=1}^N\left[\boldsymbol{x}_n^{\top} \boldsymbol{x}_n-2 z_{n 1} \boldsymbol{w}_1^{\top} \boldsymbol{x}_n+z_{n 1}^2\right]
+\end{aligned}
+$$
+- Now we can take the derivatives wrt to $z_{b1}
 ## Computational Issues
 
