@@ -107,4 +107,5 @@ $$
 - $\mu$ is the empirical mean
 - $\hat{\boldsymbol{x}}_n=\mathbf{W} \boldsymbol{z}_n+\boldsymbol{\mu}$
 - $\boldsymbol{z}_n=\mathbf{W}^{\boldsymbol{\top}}\left(\boldsymbol{x}_n-\boldsymbol{\mu}\right)$
-- 
+
+We can plot $\mathcal{L}_L$ vs $
