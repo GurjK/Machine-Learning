@@ -84,3 +84,8 @@ Important Notes
 - Minimizing the reconstruction error is the same thing as maximizing the variance of the projected data: $\arg \min _{\boldsymbol{w}_1} \mathcal{L}\left(\boldsymbol{w}_1\right)=\arg \max _{\boldsymbol{w}_1} \mathbb{V}\left[\tilde{\mathbf{z}}_1\left(\boldsymbol{w}_1\right)\right]$
 ## Computational Issues
 
+1) Working with the correlation matrix is better then working with the covariance matirx
+	1) PCA can be misled by directions in which the variance is high merely because of the scale of the data
+	2) Equivalent to standardizing the data
+2) If $D>N$ then it is faster to working with the $N \times N$ Gram Matrix: $XX^T$
+	1) $U$ containts the eigenvectors of $XX^T$
