@@ -104,4 +104,7 @@ Important Notes
 Using L dimensions the reconstruction error is: $$
 \mathcal{L}_L=\frac{1}{|\mathcal{D}|} \sum_{n \in \mathcal{D}}\left\|\boldsymbol{x}_n-\hat{\boldsymbol{x}}_n\right\|^2
 $$
+- $\mu$ is the empirical mean
+- $\hat{\boldsymbol{x}}_n=\mathbf{W} \boldsymbol{z}_n+\boldsymbol{\mu}$
+- $\boldsymbol{z}_n=\mathbf{W}^{\boldsymbol{\top}}\left(\boldsymbol{x}_n-\boldsymbol{\mu}\right)$
 - 
