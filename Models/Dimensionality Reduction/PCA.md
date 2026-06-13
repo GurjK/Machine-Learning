@@ -109,8 +109,12 @@ $$
 - $\boldsymbol{z}_n=\mathbf{W}^{\boldsymbol{\top}}\left(\boldsymbol{x}_n-\boldsymbol{\mu}\right)$
 
 Methods
-- We can plot $\mathcal{L}_L$ vs $L$
+- Reconstruction Error plot: We can plot $\mathcal{L}_L$ vs $L$
 	- Ideally plot this on the test data to avoid overfitting
 - Scree Plots: plot $\lambda_j$ vs $j$
 	- $\mathcal{L}_L=\sum_{j=L+1}^{D} \lambda_j$
-		- As the number of dimensions increase, eigenvalues get smaller and 
+		- As the number of dimensions increase, eigenvalues get smaller and so does the reconstruction error
+	- Fraction of Varianc eExplain: $F_L=\frac{\sum_{j=1}^L \lambda_j}{\sum_{j^{\prime}=1}^{L^{\max }} \lambda_{j^{\prime}}}$
+- Profile Likelihood
+	- Knee or elbow point where we go from large errors to small in reconstruction plot
+	- Onw way to 
