@@ -117,4 +117,9 @@ Methods
 	- Fraction of Varianc eExplain: $F_L=\frac{\sum_{j=1}^L \lambda_j}{\sum_{j^{\prime}=1}^{L^{\max }} \lambda_{j^{\prime}}}$
 - Profile Likelihood
 	- Knee or elbow point where we go from large errors to small in reconstruction plot
-	- Onw way to 
+	- the rate of decrease in the error function will be high, whereas for L > L∗, the gains will be smaller, since the model is already sufficiently complex to capture the true distribution.
+	- Profile Liklihood
+		- automates the detection in the gradient of the curve
+		- $\lambda_L$
+			- Now consider partitioning these values into two groups, depending on whether $k <L$ or $k > L$, where L is some threshold which we will determine.
+			- 
