@@ -1,3 +1,5 @@
+## Overview
+
 Principal Component Analysis: Find a linear and orthogonal projection of the high dimensional data $x \in R^D$ to a lower dimensional subspace $z \in R^L$
 
 This is a good approximation in the following sense:
@@ -14,4 +16,12 @@ $$
 - $X_c$ is a centered version of the design matrix $N \times D$
 
 This is the equivalent to maximizing the likelihood of a latent linear Gaussian model known as probablistic PCA.
+
+## Algorithm Derivation
+
+Definitions:
+- $\mathcal{D} = {x_n: n=1:N}$ where $x_n \in R^D$  is the data
+	- $N \times D$ data matrix $X$
+- $\overline{\boldsymbol{x}}=\frac{1}{N} \sum_{n=1}^N \boldsymbol{x}_n=\mathbf{0}$
+## Computational Issues
 
