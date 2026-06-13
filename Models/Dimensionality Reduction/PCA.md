@@ -45,6 +45,24 @@ $$
 & =\frac{1}{N} \sum_{n=1}^N\left[\boldsymbol{x}_n^{\top} \boldsymbol{x}_n-2 z_{n 1} \boldsymbol{w}_1^{\top} \boldsymbol{x}_n+z_{n 1}^2\right]
 \end{aligned}
 $$
-- Now we can take the derivatives wrt to $z_{b1}
+- Now we can take the derivatives wrt to $z_{n1}$ to get and using the orthonormla arguement that : 
+
+$$
+\frac{\partial}{\partial z_{n 1}} \mathcal{L}\left(\boldsymbol{w}_1, \tilde{\mathbf{z}}_1\right)=\frac{1}{N}\left[-2 \boldsymbol{w}_1^{\top} \boldsymbol{x}_n+2 z_{n 1}\right]=0 \Rightarrow z_{n 1}=\boldsymbol{w}_1^{\top} \boldsymbol{x}_n
+$$
+Conclusion:
+- Optimal embedding is determined by orthogonally projecting the data onto $w_1$.
+Now we can plug this into the loss to get the following:
+
+$$
+\begin{aligned}
+&\mathcal{L}\left(\boldsymbol{w}_1\right)=\mathcal{L}\left(\boldsymbol{w}_1, \tilde{\mathbf{z}}_1^*\left(\boldsymbol{w}_1\right)\right)=\frac{1}{N} \sum_{n=1}^N\left[\boldsymbol{x}_n^{\top} \boldsymbol{x}_n-z_{n 1}^2\right]=\text { const }-\frac{1}{N} \sum_{n=1}^N z_{n 1}^2\\
+&\text { To solve for } \boldsymbol{w}_1 \text {, note that }\\
+&\mathcal{L}\left(\boldsymbol{w}_1\right)=-\frac{1}{N} \sum_{n=1}^N z_{n 1}^2=-\frac{1}{N} \sum_{n=1}^N \boldsymbol{w}_1^{\top} \boldsymbol{x}_n \boldsymbol{x}_n^{\top} \boldsymbol{w}_1=-\boldsymbol{w}_1^{\top} \hat{\boldsymbol{\Sigma}} \boldsymbol{w}_1
+\end{aligned}
+$$
+- $\Sigma$ is the covariance matrix empirically
+	- Data is centered
+- impose the contraint the $||w_1
 ## Computational Issues
 
