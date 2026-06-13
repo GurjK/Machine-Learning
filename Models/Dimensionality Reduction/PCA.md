@@ -78,6 +78,9 @@ $$
 $$
 
 *Hence the optimal direction onto which we should project the data is an eigenvector of the covariance matrix.*
-- We want to maximize 
+- We want to maximize $\boldsymbol{w}_1^{\top} \hat{\boldsymbol{\Sigma}} \boldsymbol{w}_1=\lambda_1$ which is the same as, picking the eigenvector which corresponds to the largest eigenvalue
+
+Important Notes
+- Minimizing the reconstruction error is the same thing as maximizing the variance of the projected data: $\arg \min _{\boldsymbol{w}_1} \mathcal{L}\left(\boldsymbol{w}_1\right)=\arg \max _{\boldsymbol{w}_1} \mathbb{V}\left[\tilde{\mathbf{z}}_1\left(\boldsymbol{w}_1\right)\right]$
 ## Computational Issues
 
