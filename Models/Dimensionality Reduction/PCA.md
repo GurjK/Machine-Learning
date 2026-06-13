@@ -30,5 +30,11 @@ Goal: Approximate $x_n$ by creating a lower dimensional representation $z_n \in 
 - Assume that $x_n$ can be explained in terms of a weighted combinanation of basis functions: $w_1,...,w_L$
 	- $\boldsymbol{x}_n \approx \sum_{k=1}^L z_{n k} \boldsymbol{w}_k$
 
+There error can therefore be approximated by: $$
+\mathcal{L}(\mathbf{W}, \mathbf{Z})=\frac{1}{N}\left\|\mathbf{X}-\mathbf{Z} \mathbf{W}^{\top}\right\|_F^2=\frac{1}{N}\left\|\mathbf{X}^{\top}-\mathbf{W} \mathbf{Z}^{\top}\right\|_F^2=\frac{1}{N} \sum_{n=1}^N\left\|\boldsymbol{x}_n-\mathbf{W} \boldsymbol{z}_n\right\|^2
+$$
+- $Z$ : containts low dimension versions of the rows of $X$
+
+
 ## Computational Issues
 
