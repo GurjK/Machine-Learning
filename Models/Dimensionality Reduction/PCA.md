@@ -121,6 +121,11 @@ Methods
 	- Profile Likelihood
 		- automates the detection in the gradient of the curve
 		- Which $L$ makes the observed eignenvalue spectrum most likely
+			- The liklihood depends on $L(L,\theta)$
+				- $L$ number of principal components of interest
+				- $\theta$ all other parameters $W,\sigma^2$
+				- $L_p(k)=\max _\theta L(k, \theta)$.
+		- 
 		- $\lambda_L$
 			- Now consider partitioning these values into two groups, depending on whether $k <L$ or $k > L$, where L is some threshold which we will determine.
-			- 
+		- 
