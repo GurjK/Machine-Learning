@@ -23,5 +23,10 @@ Definitions:
 - $\mathcal{D} = {x_n: n=1:N}$ where $x_n \in R^D$  is the data
 	- $N \times D$ data matrix $X$
 - $\overline{\boldsymbol{x}}=\frac{1}{N} \sum_{n=1}^N \boldsymbol{x}_n=\mathbf{0}$
+	- Data matrix centered
+
+Goal: Approximate $x_n$ by creating a lower dimensional representation $z_n \in R^L$
+- Assume that $x_n$ can be explained in terms of a weighted combinanation of basis functions: $w_1,...,w_L$
+- 
 ## Computational Issues
 
