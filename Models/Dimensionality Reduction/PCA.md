@@ -92,4 +92,11 @@ Important Notes
 	2) $\mathbf{V}=\mathbf{X}^{\top} \mathbf{U} \boldsymbol{\Lambda}^{-\frac{1}{2}}$
 		1) This is the normalized eigenvectors
 		2) $\mathbf{V}=\mathbf{X}^{\top} \mathbf{U}$
-3) 
+3) Can be computed using the truncated SVD
+	1) Can perform PCA by using eigendomposition of $\Sigma$ or SVD decomposition of $X$
+		1) $\mathbf{Z}=\mathbf{X} \mathbf{W}=\mathbf{U}_X \mathbf{S}_X \mathbf{V}_X^{\top} \mathbf{V}_X=\mathbf{U}_X \mathbf{S}_X$
+			1) $_X$ means the L truncated SVD approximation of data matrix $X$
+		2) To get the data back: $\hat{\mathbf{X}}=\mathbf{Z} \mathbf{W}^{\top}=\mathbf{U}_X \mathbf{S}_X \mathbf{V}_X^{\top}$
+	2) For very high dimensional data we can use randomized SVD algo:
+
+
