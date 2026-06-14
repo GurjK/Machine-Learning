@@ -101,3 +101,9 @@ PPCA: $p\left(z_i \mid x_i\right)=N\left(m_i, S_i\right)$
 - Use L1 regularization to introduce sparse factor analysis
 - An informative rotation matrix
 - Use of non Gaussian priors for the latent factors
+
+### Non-Linear Factor Analysis
+
+Assumes the observed data can be modelled arising from a linear mapping from a low-dimensional set of Gaussian factors. Relax this by letting mapping from $z$ to $x$ be a non-linear model such as a neural network. Then the model becomes: $$
+p(\boldsymbol{x})=\int \mathcal{N}(\boldsymbol{x} \mid f(\boldsymbol{z} ; \boldsymbol{\theta}), \boldsymbol{\Psi}) \mathcal{N}(\boldsymbol{z} \mid \mathbf{0}, \mathbf{I}) d \boldsymbol{z}
+$$
