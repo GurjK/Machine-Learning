@@ -83,7 +83,20 @@ The Loss function follows additive boosting giving us: $\hat{y}_i^{(t)}=\sum_{k=
 
 Now we can rewrite the objective as $O b j^{(t)}=\sum_{i=1}^n l\left(y_i, \hat{y}_i^{(t-1)}+f_t\left(x_i\right)\right)+\Omega\left(f_t\right)$
 
-Using a Taylor Approximation, $f(x+\Delta x) \simeq f(x)+f^{\prime}(x) \Delta x+\frac{1}{2} f^{\prime \prime}(x) \Delta x^2$,  we can rewrite the function as:
+Using a Taylor Approximation, $f(x+\Delta x) \simeq f(x)+f^{\prime}(x) \Delta x+\frac{1}{2} f^{\prime \prime}(x) \Delta x^2$,  we can rewrite the function as: $$
+O b j^{(t)} \simeq \sum_{i=1}^n\left[l\left(y_i, \hat{y}_i^{(t-1)}\right)+g_i f_t\left(x_i\right)+\frac{1}{2} h_i f_t^2\left(x_i\right)\right]
+$$
+- Where $g_i$ is the first order differentiation term and $h_i$ is the second order differentiation term
+
+Combining this Training Loss and the Regularization terms we get $$
+\begin{aligned}
+O b j^{(t)}= & \sum_{j=1}^T\left[G_j w_j+\frac{1}{2}\left(H_j+\lambda\right) w_j^2\right]+\gamma T \\
+& \text { where } G_j=\sum_{i \in I_j} g_i \quad H_j=\sum_{i \in I_j} h_i
+\end{aligned}
+$$
+- $G$ is the entire tree and same with $H$ while g is for a leaf
+
+The objective is a sum of $T
 #### XGBoost Extreme
 
 - Optimized Gradient Boosted Tree Algorithm
