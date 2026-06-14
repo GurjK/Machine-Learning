@@ -9,9 +9,14 @@ Loss Function: $$
 $$
 - Objective has two two parts, training loss and regularization
 	- Training Loss: How well model fits training data
-		- Squared Loss function!
+		- Squared Loss function: $L(\Theta)=\sum_i\left(\hat{y}_i-y_i\right)^2$
 	- Regularization: Complexity of the trees: $\Omega(f)$
+	- Tradeoff: Optimizing training loss ecourages predictive models. Optimizing regularization ecourages generalized simpler models.
 - $\Omega(f)=\gamma J+\frac{1}{2} \lambda \sum_{j=1}^J w_j^2$
+	- First Term: $\gamma J$ 
+		- Number of leaves
+	- Second Term:
+		- L2 Norm
 	- regularize on Tree complexity
 		- Standard trees can memorize the noise in the tree leading to overfitting. 
 		- Want simplest tree that does a good job
