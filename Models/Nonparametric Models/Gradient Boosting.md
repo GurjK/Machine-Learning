@@ -63,6 +63,9 @@ Model: $F_m(\boldsymbol{x})=\sum_{j=1}^{J_m} w_{j m} \mathbb{I}\left(\boldsymbol
 - $w_{jm}$ is predicted output for region $R_{jm}$
 - 
 
+#### Gradient Boost
+
+
 **Loss Functions**
 
 Squared Error: L2Boosting
