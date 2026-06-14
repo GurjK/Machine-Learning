@@ -12,12 +12,12 @@ $$
 		- Squared Loss function: $L(\Theta)=\sum_i\left(\hat{y}_i-y_i\right)^2$
 	- Regularization: Complexity of the trees: $\Omega(f)$
 	- Tradeoff: Optimizing training loss ecourages predictive models. Optimizing regularization ecourages generalized simpler models.
-- $\Omega(f)=\gamma J+\frac{1}{2} \lambda \sum_{j=1}^J w_j^2$
+- Regularization: $\Omega(f)=\gamma J+\frac{1}{2} \lambda \sum_{j=1}^J w_j^2$
 	- First Term: $\gamma J$ 
 		- Number of leaves
 		- $\gamma$: hyperparameter
 	- Second Term:
-		- L2 Norm of leaf scores
+		- L2 Norm of leaf scores or leaf weights
 	- regularize on Tree complexity
 		- Standard trees can memorize the noise in the tree leading to overfitting. 
 		- Want simplest tree that does a good job
@@ -78,6 +78,8 @@ $$
 - where $G_L=\sum_{i \in I_L} g_{i m}, G_R=\sum_{i \in I_R} g_{i m}, H_L=\sum_{i \in I_L} h_{i m}$, and $H_R=\sum_{i \in I_R} h_{i m}$.
 - Not worth splitting the node if the gain is negative
 
+
+The Loss function follows additive boosting giving us: $\hat{y}_i^{(t)}=\sum_{k=1}^t f_k\left(x_i\right)=\hat{y}_i^{(t-1)}+f_t\left(x_i\right)$
 
 #### XGBoost Extreme
 
