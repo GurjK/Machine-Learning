@@ -71,3 +71,18 @@ $$
 $$
 - where $G_L=\sum_{i \in I_L} g_{i m}, G_R=\sum_{i \in I_R} g_{i m}, H_L=\sum_{i \in I_L} h_{i m}$, and $H_R=\sum_{i \in I_R} h_{i m}$.
 - Not worth splitting the node if the gain is negative
+
+
+#### XGBoost Extreme
+
+- Optimized Gradient Boosted Tree Algorithm
+- Regularized
+
+Algorithmic Improvements
+- Sparse Aware Algorithm
+- Sparsity
+	- Presence of missing data
+		- Guesses best direction of the data. Default
+	- Only visits non-missing entries
+	- Frequent zeros in data
+	- G
