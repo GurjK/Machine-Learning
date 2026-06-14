@@ -41,14 +41,20 @@ $$
 Generally, FA approximates Covariance matrix using a low rank decomposition: $\mathbf{C}=\operatorname{Cov}[\boldsymbol{x}]=\mathbf{W W}^{\top}+\boldsymbol{\Psi}$
 - $\Psi$ must be diagonal
 	- After accounting for latent factors, any remaining noise is independent. All correlations between variables must be explained through the latent factors
+- Covariance = Low Rank part + Diagonal part
 
 Using Bayes Rule we get: $$
 p(\boldsymbol{z} \mid \boldsymbol{x})=\mathcal{N}\left(\boldsymbol{z} \mid \mathbf{W}^{\top} \mathbf{C}^{-1}(\boldsymbol{x}-\boldsymbol{\mu}), \mathbf{I}-\mathbf{W}^{\top} \mathbf{C}^{-1} \mathbf{W}\right)
 $$
+- $E[z \mid x]=W^T C^{-1}(x-\mu)$
+	- Factor Score. Best Estimate of the hidden factors given the observed data
+	- Different between PCA and FA?
+		- FA accounts for noise covariance $\Psi$
 ### Probabilistic PCA
 
 Assume:
 - $W$ has orthonormal columns
-- $\Psi = sigma^2 I$
+- $\Psi = \sigma^2 I$
+- 
 
 This is called Probablistic principal component analysis or sensible PCA
