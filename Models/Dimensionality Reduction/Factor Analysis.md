@@ -60,9 +60,15 @@ Assume:
 This is called Probablistic principal component analysis or sensible PCA
 - PCA assumes no probablistic covariance model
 	- Can't handle missing values
+	- PCA is a limiting case of PPCA wehere $\sigma^2 \to 0$
 - PPCA: $WW^T + \sigma^2 I$
-	- Can han
+	- Can handle them naturally using EM because it has a likelihood function.
 - FA: $WW^T + \Psi$
+
+Marginal Distribution: $p(\boldsymbol{x} \mid \boldsymbol{\theta})=\int \mathcal{N}\left(\boldsymbol{x} \mid \mathbf{W} \boldsymbol{z}, \sigma^2 \mathbf{I}\right) \mathcal{N}(\boldsymbol{z} \mid \mathbf{0}, \mathbf{I}) d \boldsymbol{z}=\mathcal{N}(\boldsymbol{x} \mid \boldsymbol{\mu}, \mathbf{C})$
+- $\mathbf{C}=\mathbf{W} \mathbf{W}^{\top}+\sigma^2 \mathbf{I}$
+Log Likelihood: $\log p\left(\mathbf{X} \mid \boldsymbol{\mu}, \mathbf{W}, \sigma^2\right)=-\frac{N}{2}\left[D \log (2 \pi)+\log |\mathbf{C}|+\operatorname{tr}\left(\mathbf{C}^{-1} \mathbf{S}\right)\right]$
+- $S$: Empirical Covariance matrix
 
 
 To use PPCA as an alternative to PCA, we need to compute the posterior mean: $E[Z |x]$, which is the equivalent of the encoder model.
