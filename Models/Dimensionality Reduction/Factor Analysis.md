@@ -70,5 +70,14 @@ Marginal Distribution: $p(\boldsymbol{x} \mid \boldsymbol{\theta})=\int \mathcal
 Log Likelihood: $\log p\left(\mathbf{X} \mid \boldsymbol{\mu}, \mathbf{W}, \sigma^2\right)=-\frac{N}{2}\left[D \log (2 \pi)+\log |\mathbf{C}|+\operatorname{tr}\left(\mathbf{C}^{-1} \mathbf{S}\right)\right]$
 - $S$: Empirical Covariance matrix
 
+$W$ must satisfy
+- $\mathbf{W}=\mathbf{U}_L\left(\mathbf{L}_L-\sigma^2 \mathbf{I}\right)^{\frac{1}{2}} \mathbf{R}$
+	- - $U_L=$ leading PCA eigenvectors
+	- $\Lambda_L=$ leading eigenvalues
+	- $R=$ arbitrary orthogonal matrix
+- In PCA, $W = U_L L_L^{1/2}$
+	- which is the average distortion associated with the discarded dimensions.
+
 
 To use PPCA as an alternative to PCA, we need to compute the posterior mean: $E[Z |x]$, which is the equivalent of the encoder model.
+- $\mathbb{E}[\boldsymbol{z} \mid \boldsymbol{x}]=\left(\mathbf{W}^{\boldsymbol{\top}} \mathbf{W}\right)^{-1} \mathbf{W}^{\boldsymbol{\top}}(\boldsymbol{x}-\overline{\boldsymbol{x}})$ which is the orthogonal projection of the data into the latent space, as in standard PCA.
