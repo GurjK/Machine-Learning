@@ -109,7 +109,8 @@ Greedy Tree Growing Algorithm
 	- $\operatorname{Gain}=\frac{1}{2}\left[\frac{G_L^2}{H_L+\lambda}+\frac{G_R^2}{H_R+\lambda}-\frac{\left(G_L+G_R\right)^2}{H_L+H_R+\lambda}\right]-\gamma$
 - Stop split if best split has negative gain
 
-Overall 
+Overall the algorithm stops when
+- $T$ is reached or 
 
 
 
