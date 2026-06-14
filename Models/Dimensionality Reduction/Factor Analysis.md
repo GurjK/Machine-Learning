@@ -21,4 +21,18 @@ Math Notes
 - $\operatorname{Cov}[\boldsymbol{x}]=\mathbf{W} \operatorname{Cov}[\boldsymbol{z}] \mathbf{W}^{\top}+\boldsymbol{\Psi}=\mathbf{W} \boldsymbol{\Sigma}_0 \mathbf{W}^{\top}+\boldsymbol{\Psi}$
 
 Simplifications
-- $\mu_0 = 0
+- $\mu_0 = 0$
+- $\Sigma_0 = I$
+- $\tilde{\mathbf{W}}=\mathbf{W} \boldsymbol{\Sigma}_0^{-\frac{1}{2}}$
+
+After simplifying we have: $$
+\begin{aligned}
+p(\boldsymbol{z}) & =\mathcal{N}(\boldsymbol{z} \mid \mathbf{0}, \mathbf{I}) \\
+p(\boldsymbol{x} \mid \boldsymbol{z}) & =\mathcal{N}(\boldsymbol{x} \mid \mathbf{W} \boldsymbol{z}+\boldsymbol{\mu}, \boldsymbol{\Psi}) \\
+p(\boldsymbol{x}) & =\mathcal{N}\left(\boldsymbol{x} \mid \boldsymbol{\mu}, \mathbf{W} \mathbf{W}^{\top}+\boldsymbol{\Psi}\right)
+\end{aligned}
+$$
+Generally, FA approximates Covariance matrix using a low rank decomposition: $\mathbf{C}=\operatorname{Cov}[\boldsymbol{x}]=\mathbf{W W}^{\top}+\boldsymbol{\Psi}$
+- $\Psi$ must be diagonal
+
+
