@@ -96,7 +96,18 @@ O b j^{(t)}= & \sum_{j=1}^T\left[G_j w_j+\frac{1}{2}\left(H_j+\lambda\right) w_j
 $$
 - $G$ is the entire tree and same with $H$ while g is for a leaf
 
-The objective is a sum of $T
+The objective is a sum of $T$ Quadratic functions, for each quadratic function we have: $G_j \omega_j+\frac{1}{2}\left(H_j+\lambda\right) \omega_j^2$
+- $\omega_j^*=-\frac{G_j}{H_j+\lambda}$
+
+Substitute into the orginal objective function to get a new objective function! $$
+\min O b j=-\frac{1}{2} \sum_{j=1}^T \frac{G_j^2}{H_j+\lambda}+\Upsilon T
+$$
+Greedy Tree Growing Algorithm
+- Start from tree with Depth 0
+- For each lea
+
+
+
 #### XGBoost Extreme
 
 - Optimized Gradient Boosted Tree Algorithm
