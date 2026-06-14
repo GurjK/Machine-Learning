@@ -58,3 +58,11 @@ Assume:
 - 
 
 This is called Probablistic principal component analysis or sensible PCA
+- PCA assumes no probablistic covariance model
+	- Can't handle missing values
+- PPCA: $WW^T + \sigma^2 I$
+	- Can han
+- FA: $WW^T + \Psi$
+
+
+To use PPCA as an alternative to PCA, we need to compute the posterior mean: $E[Z |x]$, which is the equivalent of the encoder model.
