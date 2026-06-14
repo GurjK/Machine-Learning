@@ -90,5 +90,9 @@ PPCA: $p\left(z_i \mid x_i\right)=N\left(m_i, S_i\right)$
 
 ```
 #PCA - sklearn
-#PPCA - ppca-
+#PPCA - ppca-rs
 ```
+
+**How to Generate a Unique W**
+- Force W to have orthonormla columns
+- 
