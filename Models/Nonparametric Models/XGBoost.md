@@ -92,3 +92,7 @@ System Optimizations
 	- Divides data into multiple blocks, and stoares blocks onto disc
 - Parallelization
 	- Sorting the data for tree building
+- Distributed computing
+- Extendibility: Customized Objective
+- Extendibility: Module library and plugins
+- Extendibility: Early Stopping
