@@ -78,9 +78,12 @@ $$
 - where $G_L=\sum_{i \in I_L} g_{i m}, G_R=\sum_{i \in I_R} g_{i m}, H_L=\sum_{i \in I_L} h_{i m}$, and $H_R=\sum_{i \in I_R} h_{i m}$.
 - Not worth splitting the node if the gain is negative
 
-
+#### Alternative View
 The Loss function follows additive boosting giving us: $\hat{y}_i^{(t)}=\sum_{k=1}^t f_k\left(x_i\right)=\hat{y}_i^{(t-1)}+f_t\left(x_i\right)$
 
+Now we can rewrite the objective as $O b j^{(t)}=\sum_{i=1}^n l\left(y_i, \hat{y}_i^{(t-1)}+f_t\left(x_i\right)\right)+\Omega\left(f_t\right)$
+
+Using a Taylor Approximation, $f(x+\Delta x) \simeq f(x)+f^{\prime}(x) \Delta x+\frac{1}{2} f^{\prime \prime}(x) \Delta x^2$,  we can rewrite the function as:
 #### XGBoost Extreme
 
 - Optimized Gradient Boosted Tree Algorithm
