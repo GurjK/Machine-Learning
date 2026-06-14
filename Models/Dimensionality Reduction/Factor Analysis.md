@@ -107,3 +107,6 @@ PPCA: $p\left(z_i \mid x_i\right)=N\left(m_i, S_i\right)$
 Assumes the observed data can be modelled arising from a linear mapping from a low-dimensional set of Gaussian factors. Relax this by letting mapping from $z$ to $x$ be a non-linear model such as a neural network. Then the model becomes: $$
 p(\boldsymbol{x})=\int \mathcal{N}(\boldsymbol{x} \mid f(\boldsymbol{z} ; \boldsymbol{\theta}), \boldsymbol{\Psi}) \mathcal{N}(\boldsymbol{z} \mid \mathbf{0}, \mathbf{I}) d \boldsymbol{z}
 $$
+Unfortunately we can no longer compute the posterior or the MLE exactly, so we need to use approximate methods. Variational autoencoders, which is the most common way to approximate a nonlinear FA model.
+
+### 
