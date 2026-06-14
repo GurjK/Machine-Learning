@@ -68,7 +68,7 @@ Model: $F_m(\boldsymbol{x})=\sum_{j=1}^{J_m} w_{j m} \mathbb{I}\left(\boldsymbol
 Input: Data: $(x_i,y_i)$
 Loss Function: MSE
 
-Step 1:
+Steps:
 - $F_0(x)=\underset{\gamma}{\operatorname{argmin}} \sum_{i=1}^n L\left(y_i, \gamma\right)$
 	- Build Base Model
 - for $m=1$ to $M$
@@ -77,7 +77,16 @@ Step 1:
 	- $r_{i m}=-\left[\frac{\partial L\left(y_i, F\left(x_i\right)\right)}{\partial F\left(x_i\right)}\right]_{F(x)=F_{m-1}(x)}$ for $i=1, \ldots, n$
 	- How much lose changes with respect to model's output
 - Build a new tree on gradient $r_{im}$
-	- 
+- Create Terminal Regions
+	- $R_{j m}$, for $j=1 \ldots J_m$
+	- Leaf nodes
+- Compute Gamma
+	- $\begin{aligned} \text { For } j & =1 \ldots J_m \\ \gamma_{j m} & =\underset{\gamma}{\operatorname{argmin}} \sum_{x_i \in R_{i j}} L\left(y_i, F_{m-1}\left(x_i\right)+\gamma\right)\end{aligned}$
+	- Calculate loss across all node model, we will get average 
+- Make a new Prediction:
+	- Update $F_m(x)=F_{m-1}(x)+\nu \sum_{j=1}^{J_m} \gamma_{j m} I\left(x \in R_{j m}\right)$
+- Output $F_{M}(x)$
+
 
 
 **Loss Functions**
