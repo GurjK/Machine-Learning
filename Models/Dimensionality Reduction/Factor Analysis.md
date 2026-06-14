@@ -19,6 +19,8 @@ Factor Analysis corresponds to the following linear-Gaussian latent variable gen
 Math Notes
 - $\mathbb{E}[\boldsymbol{x}]=\mathbf{W} \boldsymbol{\mu}_0+\boldsymbol{\mu}$ 
 - $\operatorname{Cov}[\boldsymbol{x}]=\mathbf{W} \operatorname{Cov}[\boldsymbol{z}] \mathbf{W}^{\top}+\boldsymbol{\Psi}=\mathbf{W} \boldsymbol{\Sigma}_0 \mathbf{W}^{\top}+\boldsymbol{\Psi}$
+- $\mathbb{V}\left[x_d\right]=\sum_{k=1}^L w_{d k}^2+\psi_d$,
+	- First term is variance due to common factors and secon is called uniqueness
 
 Simplifications
 - $\mu_0 = 0$
@@ -35,4 +37,13 @@ $$
 Generally, FA approximates Covariance matrix using a low rank decomposition: $\mathbf{C}=\operatorname{Cov}[\boldsymbol{x}]=\mathbf{W W}^{\top}+\boldsymbol{\Psi}$
 - $\Psi$ must be diagonal
 
+Using Bayes Rule we get: $$
+p(\boldsymbol{z} \mid \boldsymbol{x})=\mathcal{N}\left(\boldsymbol{z} \mid \mathbf{W}^{\top} \mathbf{C}^{-1}(\boldsymbol{x}-\boldsymbol{\mu}), \mathbf{I}-\mathbf{W}^{\top} \mathbf{C}^{-1} \mathbf{W}\right)
+$$
+### Probabilistic PCA
 
+Assume:
+- $W$ has orthonormal columns
+- $\Psi = sigma^2 I$
+
+This is called Probablistic principal component analysis or sensible PCA
