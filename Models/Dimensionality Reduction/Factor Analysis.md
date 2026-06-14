@@ -83,6 +83,12 @@ To use PPCA as an alternative to PCA, we need to compute the posterior mean: $E[
 - $\mathbb{E}[\boldsymbol{z} \mid \boldsymbol{x}]=\left(\mathbf{W}^{\boldsymbol{\top}} \mathbf{W}\right)^{-1} \mathbf{W}^{\boldsymbol{\top}}(\boldsymbol{x}-\overline{\boldsymbol{x}})$ which is the orthogonal projection of the data into the latent space, as in standard PCA.
 
 PCA: $z_i=W^T x_i$
-- 
+- Point Estimate
 PPCA: $p\left(z_i \mid x_i\right)=N\left(m_i, S_i\right)$
 - estimated factor values and uncertainty around that value
+- Probability distribution so u can sample new observations
+
+```
+#PCA - sklearn
+#PPCA - ppca-
+```
