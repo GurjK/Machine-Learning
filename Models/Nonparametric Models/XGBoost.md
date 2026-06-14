@@ -104,7 +104,12 @@ Substitute into the orginal objective function to get a new objective function! 
 $$
 Greedy Tree Growing Algorithm
 - Start from tree with Depth 0
-- For each lea
+- For each leaf node of a tree, try to add a split
+- Change in Obj() after adding split is:
+	- $\operatorname{Gain}=\frac{1}{2}\left[\frac{G_L^2}{H_L+\lambda}+\frac{G_R^2}{H_R+\lambda}-\frac{\left(G_L+G_R\right)^2}{H_L+H_R+\lambda}\right]-\gamma$
+- Stop split if best split has negative gain
+
+Overall 
 
 
 
