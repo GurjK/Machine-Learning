@@ -85,4 +85,10 @@ Algorithmic Improvements
 		- Guesses best direction of the data. Default
 	- Only visits non-missing entries
 	- Frequent zeros in data
-	- G
+- Weighted approximate quantile sketch
+
+System Optimizations
+- Out of core computing
+	- Divides data into multiple blocks, and stoares blocks onto disc
+- Parallelization
+	- Sorting the data for tree building
