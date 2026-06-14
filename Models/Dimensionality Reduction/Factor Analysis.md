@@ -95,4 +95,9 @@ PPCA: $p\left(z_i \mid x_i\right)=N\left(m_i, S_i\right)$
 
 **How to Generate a Unique W**
 - Force W to have orthonormla columns
-- 
+	- $W^TW=I$
+	- 
+- Force W to be lower trianglular
+- Use L1 regularization to introduce sparse factor analysis
+- An informative rotation matrix
+- Use of non Gaussian priors for the latent factors
