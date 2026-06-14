@@ -15,8 +15,9 @@ $$
 - $\Omega(f)=\gamma J+\frac{1}{2} \lambda \sum_{j=1}^J w_j^2$
 	- First Term: $\gamma J$ 
 		- Number of leaves
+		- $\gamma$: hyperparameter
 	- Second Term:
-		- L2 Norm
+		- L2 Norm of leaf scores
 	- regularize on Tree complexity
 		- Standard trees can memorize the noise in the tree leading to overfitting. 
 		- Want simplest tree that does a good job
