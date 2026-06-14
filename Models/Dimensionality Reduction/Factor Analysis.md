@@ -2,6 +2,10 @@ Factor analysis is a probabilistic model, meaning it can be treated as a buildin
 - Can be viewed as a low rank version of the gaussian distribution
 ##### Generative Model
 
+2 Main Steps
+- Generate your latent factors, $z$
+- Generate Observations: $x$
+
 Factor Analysis corresponds to the following linear-Gaussian latent variable generative model:
 - $p(\boldsymbol{z})=\mathcal{N}\left(\boldsymbol{z} \mid \boldsymbol{\mu}_0, \boldsymbol{\Sigma}_0\right)$
 	- Prior on latent factor
@@ -36,6 +40,7 @@ p(\boldsymbol{x}) & =\mathcal{N}\left(\boldsymbol{x} \mid \boldsymbol{\mu}, \mat
 $$
 Generally, FA approximates Covariance matrix using a low rank decomposition: $\mathbf{C}=\operatorname{Cov}[\boldsymbol{x}]=\mathbf{W W}^{\top}+\boldsymbol{\Psi}$
 - $\Psi$ must be diagonal
+	- After accounting for latent factors, any remaining noise is independent. All correlations between variables must be explained through the latent factors
 
 Using Bayes Rule we get: $$
 p(\boldsymbol{z} \mid \boldsymbol{x})=\mathcal{N}\left(\boldsymbol{z} \mid \mathbf{W}^{\top} \mathbf{C}^{-1}(\boldsymbol{x}-\boldsymbol{\mu}), \mathbf{I}-\mathbf{W}^{\top} \mathbf{C}^{-1} \mathbf{W}\right)
