@@ -146,8 +146,13 @@ Issues
 - binary PCA
 
 ### Factor Analysis for Paired Data
-- supervised PCA$
+- supervised PCA
 	- model the joint $p(x,y)$
 	- For paired data
 	- Leads to Bayesian Factor Regression
-- 
+- Partial Least Squares
+	- To improve predictive nature
+	- Add an extra latent variable $z_n^x$ just for inputs that is different for $z_n^s$ that is the shared bottleneck for $x_n$ and $y_n$
+- Canonical Correlation Analysis
+	- Fully Symmetric model, so we can capture dependence between $x$ and $y$ while allowing for domain specific or private noise sources
+	- $z_n^x$ for x and $z_n^y$ for y, shared $z_n^s$
