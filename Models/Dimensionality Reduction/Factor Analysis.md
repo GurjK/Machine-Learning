@@ -140,4 +140,6 @@ Replace Gaussian output, with a suitable member of the exponential family
 Issues
 - cannot compute exact posterior
 - Use exponential family PCA
-- categorical
+- categorical PCA
+- supervised PCA$
+	- model the joint $p(x,y)$
