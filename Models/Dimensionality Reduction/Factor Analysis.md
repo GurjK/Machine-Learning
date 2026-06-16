@@ -154,14 +154,21 @@ Issues
 	- no linear reconstruction, you are reconstructing prob distributions over categories
 - binary PCA
 	- every observation is either 0 or 1
+	- Bernouli distribution with logistic link function
+	- Called **Logistic PCA** or Binary Factor Analysis
 
 ### Factor Analysis for Paired Data
+
+Now we are observing inputs and outputs, so want to model their relationship through shared latent structure
+
 - supervised PCA
-	- model the joint $p(x,y)$
+	- model the joint $p(x,y)$ as bcoming from a shared latent variable $z_n$, which explains both $x_n$ and $y_n$
 	- For paired data
+	- Good for when you dont want to decide which is input and which is output
 	- Leads to Bayesian Factor Regression
 - Partial Least Squares
 	- To improve predictive nature
+	- Find latent directions with maximum covariance with $y$
 	- Add an extra latent variable $z_n^x$ just for inputs that is different for $z_n^s$ that is the shared bottleneck for $x_n$ and $y_n$
 - Canonical Correlation Analysis
 	- Fully Symmetric model, so we can capture dependence between $x$ and $y$ while allowing for domain specific or private noise sources
