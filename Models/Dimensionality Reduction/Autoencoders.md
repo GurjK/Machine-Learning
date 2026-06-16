@@ -22,5 +22,8 @@ Consider a Linear autoeoncoder where
 	- $\hat{W}$ is orthogonal projection onto the first $L$ eigenvectors of the covariance matrix of the Data
 	- This is PCA!!!!
 
-**
+**Denoising Autoencoders**
+
+Adding noise to input, then train model to reconstruct clean version of original input is called denoising autoencoders.
+- Bernouli Dropout or Gaussian Noise
 
