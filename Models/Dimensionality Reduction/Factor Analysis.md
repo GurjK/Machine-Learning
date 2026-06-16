@@ -114,3 +114,18 @@ Unfortunately we can no longer compute the posterior or the MLE exactly, so we n
 Limitation: Factor analysis arises from a linear mapping from a low dimensional set of Gaussian factors
 - Solution: Assume only locally linear so overall model is a weighted combination of mixture factor, **mixture of factor analyzers**
 
+Latent indictor: $m_n$ specifies subspace to generate data point $n$
+- $m_n =k$, sample $z_n$ from a gaussian prior and pass it through to $W_k$ matrix and add noise, 
+	- $k$ is number of mixture components
+- $W_k$ mapping from L to D dimensional visible space
+$$
+\begin{aligned}
+p\left(\boldsymbol{x}_n \mid \boldsymbol{z}_n, m_n=k, \boldsymbol{\theta}\right) & =\mathcal{N}\left(\boldsymbol{x}_n \mid \boldsymbol{\mu}_k+\mathbf{W}_k \boldsymbol{z}_n, \boldsymbol{\Psi}_k\right) \\
+p\left(\boldsymbol{z}_n \mid \boldsymbol{\theta}\right) & =\mathcal{N}\left(\boldsymbol{z}_n \mid \mathbf{0}, \mathbf{I}\right) \\
+p\left(m_n \mid \boldsymbol{\theta}\right) & =\operatorname{Cat}\left(m_n \mid \boldsymbol{\pi}\right)
+\end{aligned}
+$$
+Distribution:$$
+p(\boldsymbol{x} \mid \boldsymbol{\theta})=\sum_k p(c=k) \int d \boldsymbol{z} p(\boldsymbol{z} \mid c) p(\boldsymbol{x} \mid \boldsymbol{z}, c)=\sum_k \pi_k \int d \boldsymbol{z} \mathcal{N}\left(\boldsymbol{z} \mid \boldsymbol{\mu}_k, \mathbf{I}\right) \mathcal{N}\left(\boldsymbol{x} \mid \mathbf{W} \boldsymbol{z}, \sigma^2 \mathbf{I}\right)
+$$
+- If $\Psi = \sigma^2 I$, get a mixture of PPCA models 
