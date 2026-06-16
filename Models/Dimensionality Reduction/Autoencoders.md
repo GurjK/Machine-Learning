@@ -14,5 +14,8 @@ Consider where the enconder and decoder are nonlinear mapping implmented by neur
 
 Consider a Linear autoeoncoder where
 - $z = W_1 x$: Hidden layer output
-- $\hat{x} = W_2 z$
-	- $W_1 = L \times 
+- $\hat{x} = W_2 z = W_2 W_1 x$
+	- $W_1 = L \times D$
+	- $W_2 = D \times L$
+	- $L < D$
+- 
