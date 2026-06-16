@@ -169,7 +169,11 @@ Now we are observing inputs and outputs, so want to model their relationship thr
 - Partial Least Squares
 	- To improve predictive nature
 	- Find latent directions with maximum covariance with $y$
+	- Good for any high-dimensional  x predicting y where you suspect much of x's variance is irrelevant noise.
 	- Add an extra latent variable $z_n^x$ just for inputs that is different for $z_n^s$ that is the shared bottleneck for $x_n$ and $y_n$
 - Canonical Correlation Analysis
 	- Fully Symmetric model, so we can capture dependence between $x$ and $y$ while allowing for domain specific or private noise sources
 	- $z_n^x$ for x and $z_n^y$ for y, shared $z_n^s$
+	- Goal is to maximize correlation between $a$ and $b$
+	- CCA Maximizes correlation while PLS maximizes covariance
+		- can overfit when x or y are high dimensional relative to sample size

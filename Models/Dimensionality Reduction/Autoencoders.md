@@ -1,0 +1,1 @@
+PCA and Factor Analysis are a linear mapping from $x \to z$ called an encoder,$f_c$, then from $z \to x$ is called the decoder, $f_d$
