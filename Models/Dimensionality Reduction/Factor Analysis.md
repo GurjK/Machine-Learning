@@ -132,6 +132,11 @@ $$
 
 ### Exponential Family Factor Analysis
 
+Standard PCA
+- Assumes data is continous and gaussian
+- need to handed counts, probabilities, or ratings
+- 
+
 Replace Gaussian output, with a suitable member of the exponential family
 - natural parameters are given by a linear function of $z_n$
 - $p\left(\boldsymbol{x}_n \mid \boldsymbol{z}_n\right)=\exp \left(\mathcal{T}(\boldsymbol{x})^{\boldsymbol{\top}} \boldsymbol{\theta}+h(\boldsymbol{x})-g(\boldsymbol{\theta})\right)$
@@ -143,7 +148,12 @@ Issues
 ### Other forms of Factor Analysis
 - Use exponential family PCA
 - categorical PCA
+	- Purely for categorical variables, one hote encoded features etc
+	- Places a softmax liklihood over the categories
+	- $W$ is a tensor
+	- no linear reconstruction, you are reconstructing prob distributions over categories
 - binary PCA
+	- every observation is either 0 or 1
 
 ### Factor Analysis for Paired Data
 - supervised PCA
