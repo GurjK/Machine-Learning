@@ -139,7 +139,15 @@ Replace Gaussian output, with a suitable member of the exponential family
 
 Issues
 - cannot compute exact posterior
+
+### Other forms of Factor Analysis
 - Use exponential family PCA
 - categorical PCA
+- binary PCA
+
+### Factor Analysis for Paired Data
 - supervised PCA$
 	- model the joint $p(x,y)$
+	- For paired data
+	- Leads to Bayesian Factor Regression
+- 
