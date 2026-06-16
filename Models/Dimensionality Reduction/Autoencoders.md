@@ -5,4 +5,14 @@ Overall reconstruction function: $r(x) = f_d (f_e) (x))$
 
 Consider where the enconder and decoder are nonlinear mapping implmented by neural networks
 - MLP with one hidden layer, the hidden units are a low dimensional **bottleneck** between input and reconstruction
+- Narrow the bottleneck layer $L <<D$
+	- undercomplete
+- $L >>D$
+	- overcomplete
 
+### Bottleneck Encoders
+
+Consider a Linear autoeoncoder where
+- $z = W_1 x$: Hidden layer output
+- $\hat{x} = W_2 z$
+	- $W_1 = L \times 
