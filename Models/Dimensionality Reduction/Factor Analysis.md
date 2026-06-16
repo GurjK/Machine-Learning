@@ -109,4 +109,8 @@ p(\boldsymbol{x})=\int \mathcal{N}(\boldsymbol{x} \mid f(\boldsymbol{z} ; \bolds
 $$
 Unfortunately we can no longer compute the posterior or the MLE exactly, so we need to use approximate methods. Variational autoencoders, which is the most common way to approximate a nonlinear FA model.
 
-### 
+### Mixture of factor analyzers
+
+Limitation: Factor analysis arises from a linear mapping from a low dimensional set of Gaussian factors
+- Solution: Assume only locally linear so overall model is a weighted combination of mixture factor, **mixture of factor analyzers**
+
