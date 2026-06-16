@@ -129,3 +129,15 @@ Distribution:$$
 p(\boldsymbol{x} \mid \boldsymbol{\theta})=\sum_k p(c=k) \int d \boldsymbol{z} p(\boldsymbol{z} \mid c) p(\boldsymbol{x} \mid \boldsymbol{z}, c)=\sum_k \pi_k \int d \boldsymbol{z} \mathcal{N}\left(\boldsymbol{z} \mid \boldsymbol{\mu}_k, \mathbf{I}\right) \mathcal{N}\left(\boldsymbol{x} \mid \mathbf{W} \boldsymbol{z}, \sigma^2 \mathbf{I}\right)
 $$
 - If $\Psi = \sigma^2 I$, get a mixture of PPCA models 
+
+### Exponential Family Factor Analysis
+
+Replace Gaussian output, with a suitable member of the exponential family
+- natural parameters are given by a linear function of $z_n$
+- $p\left(\boldsymbol{x}_n \mid \boldsymbol{z}_n\right)=\exp \left(\mathcal{T}(\boldsymbol{x})^{\boldsymbol{\top}} \boldsymbol{\theta}+h(\boldsymbol{x})-g(\boldsymbol{\theta})\right)$
+	- where the $N \times D$ matrix of natural parameters is assumed to be given by the low rank decomposition $\mathbf{\Theta}=\mathbf{Z} \mathbf{W}$, where $\mathbf{Z}$ is $N \times L$ and $\mathbf{W}$ is $L \times D$. The resulting model is called exponential family factor analysis.
+
+Issues
+- cannot compute exact posterior
+- Use exponential family PCA
+- categorical
