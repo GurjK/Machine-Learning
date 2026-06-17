@@ -26,4 +26,7 @@ Consider a Linear autoeoncoder where
 
 Adding noise to input, then train model to reconstruct clean version of original input is called denoising autoencoders.
 - Bernouli Dropout or Gaussian Noise
+	- As $\sigma \to 0$ then the residuals approximate the log probability of the data density
+	- 
+- 
 
