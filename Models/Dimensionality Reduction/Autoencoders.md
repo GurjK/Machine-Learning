@@ -1,5 +1,5 @@
 PCA and Factor Analysis are a linear mapping from $x \to z$ called an encoder,$f_e$, then from $z \to x$ is called the decoder, $f_d$
-
+- Laten Space: compressed, abstract coordinate system that a model learns to represent data in, capturing essnetial structure without raw complexity
 An Autoencoder is a neural network trained to compress data into a compact representation and then reconstruct it back — learning to encode only the most essential information.
 - Trainined to minimized reconstruction loss
 - Bottleneck forces the model to learn a compressed, meaningful representation rather than just copying input
@@ -83,4 +83,4 @@ Training VAEs
 VAE vs Autoencoders
 - Primary advantage: can be used to generate new data from random noise
 - The reason the VAE is better at sample is that it embeds images into Gaussians in latent space, whereas the AE embeds images into points, which are like delta functions.
-	- Latent distribution encourages local smoothe
+	- Latent distribution encourages local smoothness
