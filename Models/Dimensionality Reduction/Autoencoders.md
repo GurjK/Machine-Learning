@@ -54,5 +54,9 @@ Two key ideas
 		- $f_d$ is a decoder
 	- For binary use a bernouli likelihood: $p(\boldsymbol{x} \mid \boldsymbol{z}, \boldsymbol{\theta})=\prod_{i=1}^D \operatorname{Ber}\left(x_i \mid f_d(\boldsymbol{z} ; \boldsymbol{\theta}), \sigma^2 \mathbf{I}\right)$
 - Create another model $q(z|x)$ called a recognition network or inference network,  that is trained with the generative model to approximate posterior 
-	- Assume a posterior is gaussian, with diag
+	- Assume a posterior is gaussian, with diagonla covariance then $q_{\boldsymbol{\phi}}(\boldsymbol{z} \mid \boldsymbol{x})=\mathcal{N}\left(\boldsymbol{z} \mid f_{e, \mu}(\boldsymbol{x} ; \boldsymbol{\phi}), \operatorname{diag}\left(f_{e, \sigma}(\boldsymbol{x} ; \boldsymbol{\phi})\right)\right)$
+	- $f_e$ is the encoder
+
+Logic: Training an inference network inverts a generative network, rather than running an optimization algo to infer latent code
+- By contrast, the VAE optimizes a variational lower bound on the log-likelihood, which is more principled, since it is a single unified objective.
 
