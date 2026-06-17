@@ -77,4 +77,10 @@ Training VAEs
 	- $\begin{aligned} \mathrm{L}(\boldsymbol{\theta}, \boldsymbol{\phi} \mid \boldsymbol{x}) & =\mathbb{E}_{q_\phi(\boldsymbol{z} \mid \boldsymbol{x})}\left[\log p_{\boldsymbol{\theta}}(\boldsymbol{x}, \boldsymbol{z})-\log q_{\boldsymbol{\phi}}(\boldsymbol{z} \mid \boldsymbol{x})\right] \\ & =\mathbb{E}_{q(\boldsymbol{z} \mid \boldsymbol{x}, \boldsymbol{\phi})}[\log p(\boldsymbol{x} \mid \boldsymbol{z}, \boldsymbol{\theta})]-D_{\mathbb{K L}}(q(\boldsymbol{z} \mid \boldsymbol{x}, \boldsymbol{\phi}) \| p(\boldsymbol{z}))\end{aligned}$
 - How to compute ELBO and Gradient?
 	- Minimize: $-\mathbb{E}_{\boldsymbol{x} \sim \mathcal{D}}[\mathrm{L}(\boldsymbol{\theta}, \boldsymbol{\phi} \mid \boldsymbol{x})]$ wrt $\theta$ and $\phi$ know as the reparameterization trick
-	- 
+		- The first term in the ELBO can be approximated by sampling $\boldsymbol{\epsilon}$, scaling it by the output of the inference network to get $\boldsymbol{z}$, and then evaluating $\log p(\boldsymbol{x} \mid \boldsymbol{z})$ using the decoder network.
+		- Second Term: $D_{\mathbb{K L}}(q \| p)=\sum_{k=1}^K\left[\log \left(\frac{1}{\sigma_k}\right)+\frac{\sigma_k^2+\left(\mu_k-0\right)^2}{2 \cdot 1}-\frac{1}{2}\right]=-\frac{1}{2} \sum_{k=1}^K\left[\log \sigma_k^2-\sigma_k^2-\mu_k^2+1\right]$
+
+VAE vs Autoencoders
+- Primary advantage: can be used to generate new data from random noise
+- The reason the VAE is better at sample is that it embeds images into Gaussians in latent space, whereas the AE embeds images into points, which are like delta functions.
+	- Latent distribution encourages local smoothe
