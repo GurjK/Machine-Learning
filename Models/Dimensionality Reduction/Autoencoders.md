@@ -73,3 +73,8 @@ Logic: Training an inference network inverts a generative network, rather than r
 Training VAEs
 - Cannot compute exact marginal liklihood: $p(x | \theta)$
 - Use inference network to approximate posterior: $q(z|x)$
+	- Use to compute evidence lower bound, expected log liklihood + regularizer
+	- $\begin{aligned} \mathrm{L}(\boldsymbol{\theta}, \boldsymbol{\phi} \mid \boldsymbol{x}) & =\mathbb{E}_{q_\phi(\boldsymbol{z} \mid \boldsymbol{x})}\left[\log p_{\boldsymbol{\theta}}(\boldsymbol{x}, \boldsymbol{z})-\log q_{\boldsymbol{\phi}}(\boldsymbol{z} \mid \boldsymbol{x})\right] \\ & =\mathbb{E}_{q(\boldsymbol{z} \mid \boldsymbol{x}, \boldsymbol{\phi})}[\log p(\boldsymbol{x} \mid \boldsymbol{z}, \boldsymbol{\theta})]-D_{\mathbb{K L}}(q(\boldsymbol{z} \mid \boldsymbol{x}, \boldsymbol{\phi}) \| p(\boldsymbol{z}))\end{aligned}$
+- How to compute ELBO and Gradient?
+	- Minimize: $-\mathbb{E}_{\boldsymbol{x} \sim \mathcal{D}}[\mathrm{L}(\boldsymbol{\theta}, \boldsymbol{\phi} \mid \boldsymbol{x})]$ wrt $\theta$ and $\phi$ know as the reparameterization trick
+	- 
