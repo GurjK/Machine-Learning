@@ -40,5 +40,11 @@ $$
 
 **Spare Autoencoders**
 
+Add activity regularization, to the regularize autoencoders: $\Omega(\boldsymbol{z})=\lambda\|\boldsymbol{z}\|_1$
+- alternatively use logistic units, then compute the expected fraction of time each unit $k$ is on within a minibatch
 
+**Variational Autoeconders**
+
+Can be though of as a probablistic version of a derministic autoencoder.
+- VAE is a generative model that an create new samples, where
 
