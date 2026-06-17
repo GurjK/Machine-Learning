@@ -4,6 +4,7 @@ An Autoencoder is a neural network trained to compress data into a compact repre
 - Trainined to minimized reconstruction loss
 - Bottleneck forces the model to learn a compressed, meaningful representation rather than just copying input
 - used in dimensionality reducition, denoising, anomaly detection, feature learning
+- The latent space has no guaranteed structure. Points in it may be clustered arbitrarily, with "gaps" between them — so you can't reliably _sample_ new data by picking a random point in latent space.
 
 Overall reconstruction function: $r(x) = f_d (f_e) (x))$
 - trained to minimize $\mathcal{L}(\boldsymbol{\theta})=\|r(\boldsymbol{x})-\boldsymbol{x}\|_2^2$. More generally, we can use $\mathcal{L}(\boldsymbol{\theta})=-\log p(\boldsymbol{x} \mid r(\boldsymbol{x}))$
@@ -52,6 +53,10 @@ Add activity regularization, to the regularize autoencoders: $\Omega(\boldsymbol
 
 Can be though of as a probablistic version of a derministic autoencoder.
 - VAE is a generative model that an create new samples, whereas an autoencoder just computes embeddings of input values
+- Encoder outputs a distribution specifically the mean and variance of a Gaussian
+- Then sample from $z$
+- Total Loss = Reconstruction Loss + KL Divergence
+	- KL penalizes for straying too far from standard normal
 
 Two key ideas
 - Create a non-linear extension of the factor analysis generative model
@@ -65,3 +70,6 @@ Two key ideas
 Logic: Training an inference network inverts a generative network, rather than running an optimization algo to infer latent code
 - By contrast, the VAE optimizes a variational lower bound on the log-likelihood, which is more principled, since it is a single unified objective.
 
+Training VAEs
+- Cannot compute exact marginal liklihood: $p(x | \theta)$
+- Use inference network to approximate posterior: $q(z|x)$
