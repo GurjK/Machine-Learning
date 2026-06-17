@@ -46,5 +46,13 @@ Add activity regularization, to the regularize autoencoders: $\Omega(\boldsymbol
 **Variational Autoeconders**
 
 Can be though of as a probablistic version of a derministic autoencoder.
-- VAE is a generative model that an create new samples, where
+- VAE is a generative model that an create new samples, whereas an autoencoder just computes embeddings of input values
+
+Two key ideas
+- Create a non-linear extension of the factor analysis generative model
+	- From $p(\boldsymbol{x} \mid \boldsymbol{z})=\mathcal{N}\left(\boldsymbol{x} \mid \mathbf{W} \boldsymbol{z}, \sigma^2 \mathbf{I}\right)$ to $p_{\boldsymbol{\theta}}(\boldsymbol{x} \mid \boldsymbol{z})=\mathcal{N}\left(\boldsymbol{x} \mid f_d(\boldsymbol{z} ; \boldsymbol{\theta}), \sigma^2 \mathbf{I}\right)$
+		- $f_d$ is a decoder
+	- For binary use a bernouli likelihood: $p(\boldsymbol{x} \mid \boldsymbol{z}, \boldsymbol{\theta})=\prod_{i=1}^D \operatorname{Ber}\left(x_i \mid f_d(\boldsymbol{z} ; \boldsymbol{\theta}), \sigma^2 \mathbf{I}\right)$
+- Create another model $q(z|x)$ called a recognition network or inference network,  that is trained with the generative model to approximate posterior 
+	- Assume a posterior is gaussian, with diag
 
