@@ -1,5 +1,10 @@
 PCA and Factor Analysis are a linear mapping from $x \to z$ called an encoder,$f_e$, then from $z \to x$ is called the decoder, $f_d$
 
+An Autoencoder is a neural network trained to compress data into a compact representation and then reconstruct it back — learning to encode only the most essential information.
+- Trainined to minimized reconstruction loss
+- Bottleneck forces the model to learn a compressed, meaningful representation rather than just copying input
+- used in dimensionality reducition, denoising, anomaly detection, feature learning
+
 Overall reconstruction function: $r(x) = f_d (f_e) (x))$
 - trained to minimize $\mathcal{L}(\boldsymbol{\theta})=\|r(\boldsymbol{x})-\boldsymbol{x}\|_2^2$. More generally, we can use $\mathcal{L}(\boldsymbol{\theta})=-\log p(\boldsymbol{x} \mid r(\boldsymbol{x}))$
 
