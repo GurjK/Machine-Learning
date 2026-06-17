@@ -27,6 +27,18 @@ Consider a Linear autoeoncoder where
 Adding noise to input, then train model to reconstruct clean version of original input is called denoising autoencoders.
 - Bernouli Dropout or Gaussian Noise
 	- As $\sigma \to 0$ then the residuals approximate the log probability of the data density
-	- 
-- 
+
+**Contractive Autoeconoders**
+
+Alternatively can add a penalty term: $$
+\Omega(\boldsymbol{z}, \boldsymbol{x})=\lambda\left\|\frac{\partial f_e(\boldsymbol{x})}{\partial \boldsymbol{x}}\right\|_F^2=\lambda \sum_k\left\|\nabla_{\boldsymbol{x}} h_k(\boldsymbol{x})\right\|_2^2
+$$
+- $h_k$ is the value of the kth hidden embedding unit
+- penalize the frobenius norm of the encoder's Jacobian
+- To minimize penalty term, encoder would be contant, but if it was constant then it would ignore input, sow high reconstruction cost. 
+	- Two terms together encourage the model to learn a representation where only a few units change in response to most significant variations in input
+
+**Spare Autoencoders**
+
+
 
